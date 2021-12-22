@@ -1,5 +1,8 @@
 # TIC TAC TOE game
 
+Live Demo : [Tic Tac Toe](https://igeegi-newtictactoe.netlify.app/)
+
+
 A simple Tic Tac Toe Game with different board size to play.
 
 --Created using React 
