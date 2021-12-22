@@ -97,16 +97,10 @@ export default class Game extends Component {
 		const history = this.state.history.slice();
 		const turn = this.state.turn;
 		const step = this.state.step;
-
-		// Showing the board state at a specified point in time
 		const squares = history[step].squares.slice();
 		const winState = history[step].winState.slice();
-
-		// Defining the right game status
 		const winner = this.calculateWinner(dimension, winState);
 		const status = winner ? "PEMENANGNYA: " + winner : "Giliran: " + turn;
-
-		// Listing out all past moves
 		const moves = history.map((board, step) => {
 			const label = step ? "Langkah ke #" + step : "Ulang Game";
 			return (
