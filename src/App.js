@@ -7,7 +7,7 @@ export default function App() {
     <div className="game-container">
       <h1>Tic Tac Toe</h1>
         <Game />
-      <a className='igeegi' href="https://igeegi.my.id" target='_blank'>igeegi</a>
+      <a className='igeegi' href="https://igeegi.my.id" target='_blank' rel='noopener'>igeegi</a>
     </div>
   );
 }
