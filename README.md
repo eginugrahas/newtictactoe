@@ -3,8 +3,11 @@
 A simple Tic Tac Toe Game with different board size to play.
 
 --Created using React 
+<br> 
 --Slider Level from 3x3 to 7x7
+<br>
 --Bahasa
+<br>
 --Custom image assets
 
 ## Personal Challenge
