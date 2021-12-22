@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap');
+@font-face {
+  font-family: 'Colored Crayons';
+  src: url(../public/Colored\ Crayons.woff2);
+}
+/* Global */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	font-family: 'Comfortaa';
+	font-weight: 400;
+	color: white;
+
+	background: rgb(0, 77, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ol, ul {
+	padding-left: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul li {
+	padding-bottom: 0.5rem;
+	list-style-type: none;
 }
 
-.App-link {
-  color: #61dafb;
+.game-container, .game, .nav {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* border: 2px solid red; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-container {
+	height: 100vh;
+	width: 100vw;
+	background-image: url(../public/images/bg-blackboard.png);
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-size: 117vw 100vh;
+	justify-content: start;
+}
+
+/* Nav */
+.nav {
+	position: relative;
+}
+
+h1 {
+	font-size: 3rem;
+	margin: 2.5rem 0 0.5rem 0;
+	text-decoration: underline;
+}
+
+	
+small {
+	font-size: 0.7rem;
+}
+.mudah {
+	position: absolute;
+	top: 40%;
+	left: 0;
+}
+.sulit {
+	position: absolute;
+	top: 40%;
+	right: 0;
+}
+
+#dimension-label {
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.slider {
+	width: 100%;
+	height: 1rem;
+	margin: 1.5rem 0 0.5rem 0;
+}
+
+/* Board */
+.board-row:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+
+
+.square {
+	background: transparent;
+	border-image-source: url(../public/images/border-line.png);
+  	border-image-slice:28;
+  	border-image-width:1.1rem;
+ 	border-image-outset:5px;
+ 	border-image-repeat:stretch stretch;
+  	border-style: solid;
+	float: left;
+	line-height: 50px;
+	width: 50px;
+	height: 50px;
+	margin-right: -1px;
+	margin-top: -1px;
+	padding: 0;
+	text-align: center;
+
+	font-family: 'Colored Crayons';
+  	font-size: 2rem;
+  	font-weight: 300;
+  	color: white;
+}
+
+.square:focus {
+	outline: none;
+}
+
+.game-info {
+	display: flex;
+	align-items: flex-start;
+	margin: 1rem;
+}
+.status {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+
+.game-info button {
+	border: none;
+	background: transparent;
+
+	font-family: 'Comfortaa';
+	text-decoration: underline;
+	font-size: 1rem;
+	font-weight: 300;
+	color: white;
+}
+
+.igeegi {
+	color: rgb(255, 196, 0);
+	text-decoration: none;
+	position: absolute;
+	bottom: 8%;
+	right: 5%;
 }
